@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>girlworld</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #cdf7d9;
+        }
+        .cam {
+            position: relative;
+            width: 80%;
+            max-width: 100%;
+            height: 500px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .cam iframe {
+
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+        .audio-control button{
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .audio-control button:hover {
+            box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        } 
+
+        p{
+            margin-right:50px;
+            margin-top:200px;
+        }
+        
+
+    </style>
+</head>
+<body>
+   
+    <audio id="bg-music">
+        <source src="bettertime.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="cam">
+        <iframe src="http://84.9.164.137:50000/SnapshotJPEG?Resolution=640x480&amp;Quality=Clarity&amp;1710860781"></iframe> 
+    </div>
+
+    <div class="audio-control">
+        <button onclick="toggleAudio()">song</button>
+    </div>
+    <p>
+       <a href="page1/index.html" class="button">reroute</a>
+    </p>
+
+    <script>
+        var audio = document.getElementById('bg-music');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+  
+    </script>
+</body>
+</html>

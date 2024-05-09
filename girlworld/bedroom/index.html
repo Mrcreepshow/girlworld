@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Cute+Font&family=Jacquard+12+Charted&family=Jacquard+24&family=Jersey+10+Charted&family=Rubik+Burned&family=Special+Elite&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <title>x</title>
+</head>
+<body>
+    <div id="imageContainer">
+        <img id="randomImage" src="thermals-4.jpg" alt="Random Image" style="width: 100%;  object-fit: cover;">
+    </div>
+    <div class="clicks">
+        <button onclick="randomizeImage()">new</button>
+    </div>
+
+    <script>
+        const images = [
+            'poemscan1.jpg',
+            'poemscan2.jpg',
+            'poemscan3.jpg',
+            'poemscan4.jpg',
+            'poemscan5.jpg',
+            'poemscan6.jpg',
+            'poemscan7.jpg',
+            'poemscan8.jpg',
+            'poemscan9.jpg',
+            'poemscan10.jpg'
+        ];
+
+        function randomizeImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImageUrl = images[randomIndex];
+            document.getElementById('randomImage').src = randomImageUrl;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.jacquard-12-charted-regular {
+    font-family: "Jacquard 12 Charted", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  }
+  
+body{
+    background-image: url('churchwindows.jpg');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    
+}
+.satellite{
+    text-decoration: none;
+    font-family: "Jacquard 12 Charted";
+    font-size: 60px;
+    margin-left: 6.5vw;
+    color: white;
+
+}
+.poems{
+    text-decoration: none;
+    font-family: "Jacquard 12 Charted";
+    font-size: 60px;
+    margin-left: 6.5vw;
+    color: white;  
+}
